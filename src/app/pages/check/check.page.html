@@ -6,9 +6,18 @@
   <ion-list>
 
 
-    <ion-item *ngFor="let item of data">
-      <ion-checkbox slot="end" mode="md"></ion-checkbox>
+    <ion-item *ngFor="let item of data"
+              (click)="onClick(item)">
+      <ion-checkbox slot="end" mode="md"
+                    [color]="item.name"
+                    [(ngModel)]="item.selected">
+      </ion-checkbox>
       <ion-label>{{item.name}}</ion-label>
     </ion-item>
   </ion-list>
+
+    <ion-button (click)="verData()" expand="block">
+      Ver Data
+    </ion-button>
+
 </ion-content>

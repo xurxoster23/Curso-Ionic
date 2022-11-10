@@ -30,7 +30,7 @@ export class InicioPage implements OnInit {
       redirectTo: '/avatar'
     },
     {
-      icon: 'radio-button-outline',
+      icon: 'radio-button-off-outline',
       name: 'Buttons',
       redirectTo: '/buttons'
     },
@@ -43,6 +43,31 @@ export class InicioPage implements OnInit {
       icon: 'checkmark-circle-outline',
       name: 'Checks',
       redirectTo: '/check'
+    },
+    {
+      icon: 'calendar-outline',
+      name: 'DateTime',
+      redirectTo: '/date-time'
+    },
+    {
+      icon: 'car-outline',
+      name: 'Fab',
+      redirectTo: '/fab'
+    },
+    {
+      icon: 'grid-outline',
+      name: 'Grid',
+      redirectTo: '/grid'
+    },
+    {
+      icon: 'infinite-outline',
+      name: 'Infinite',
+      redirectTo: '/infinite'
+    },
+    {
+      icon: 'albums-outline',
+      name: 'Inputs',
+      redirectTo: '/input'
     }
   ];
   constructor() { }

@@ -20,14 +20,22 @@ export class CheckPage implements OnInit {
       name: 'tertiary',
       selected: false
     },{
-      name: 'sucess',
+      name: 'success',
       selected: true
     }
-  ]
+  ];
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onClick(item){
+    console.log(item);
+  }
+
+  verData(){
+    console.log(this.data);
   }
 
 }
