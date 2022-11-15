@@ -5,16 +5,23 @@
   <ion-menu contentId="main" menuId="first" side="start">
     <ion-header>
       <ion-toolbar color="primary">
-        <ion-title>Menu Secundario</ion-title>
+        <ion-title>Menú</ion-title>
       </ion-toolbar>
     </ion-header>
+
     <ion-content>
+
       <ion-list>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
+
+        <ion-menu-toggle *ngFor="let c of componentes | async">
+            <ion-item [routerLink]="c.redirectTo" class="ion-text-capitalize" detail>
+              <!-- detail nos indica la posibilidad de abrir items anidados -->
+              <ion-icon [name]="c.icon" slot="start" color="primary"></ion-icon>
+              {{ c.name }}
+          </ion-item>
+        </ion-menu-toggle>
+
+
       </ion-list>
     </ion-content>
   </ion-menu>
