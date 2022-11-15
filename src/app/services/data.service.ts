@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Componente } from 'src/app/interfaces/interfaces';
 
 
 
@@ -8,9 +9,13 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DataService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private httpCtrl: HttpClient) { }
 
   getUsuarios(){
-    return this.http.get('https://jsonplaceholder.typicode.com/users');
+    return this.httpCtrl.get('https://jsonplaceholder.typicode.com/users');
+  }
+
+  getMenuOpt(){
+    return this.httpCtrl.get<Componente[]>('/assets/data/menu-opts.json');
   }
 }

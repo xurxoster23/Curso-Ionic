@@ -3,7 +3,9 @@
 
     <!-- Insercción del Componente ion-menu de forma Sencilla -->
     <ion-buttons slot="start">
-      <ion-menu-button menu="first" color="primary"></ion-menu-button>
+      <ion-menu-button menu="first" color="primary">
+        <ion-icon name="grid-outline"></ion-icon>
+      </ion-menu-button>
     </ion-buttons>
 
     <!-- 
@@ -24,7 +26,7 @@
 
 
   <ion-list>
-    <ion-item *ngFor="let c of componentes"
+    <ion-item *ngFor="let c of componentes | async"
         [routerLink]="c.redirectTo" class="ion-text-capitalize" detail>
         <!-- detail nos indica la posibilidad de abrir items anidados -->
       <ion-icon [name]="c.icon" slot="start" color="primary"></ion-icon>
