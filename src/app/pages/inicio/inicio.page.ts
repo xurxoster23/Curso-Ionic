@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 // Creamos una Interfaz dónde especificamos el tipo de datos de la lista
 interface Componente {
   icon:string;
@@ -85,9 +86,13 @@ export class InicioPage implements OnInit {
       redirectTo: '/loading'
     }
   ];
-  constructor() { }
+  constructor(private menuCTRL: MenuController) { }
 
   ngOnInit() {
+  }
+
+  mostrarMenu() {
+    this.menuCTRL.open('first');
   }
 
 }
